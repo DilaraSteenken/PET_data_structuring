@@ -1,0 +1,49 @@
+# ==================================================
+# EXAMPLE CONFIGURATION
+
+# 1. DICOM conversion
+dicom_conversion:
+  MainFolder: 'D:\Research\PET_Data'
+  SubFolder: 'Example_Project'
+  OutputFolder: 'Database\Raw_data'
+  SubOutputFolder: 'Example_Project'
+
+
+# 2. BIDS-like conversion
+bids_conversion:
+  main_folder: 'D:\Research\PET_Database'
+  sub_folder: 'Raw_data'
+  project_folder: 'Example_Project'
+  output: 'Example_Project'
+
+
+# 3. Data frame creation
+df_creation:
+  main_folder: 'D:\Research\PET_Database'
+  data_type:
+    - Raw_data
+    - Processed_data
+  project_folders:
+    - Example_Project_A
+    - Example_Project_B
+  condition_folders:
+    - Example_Project_A
+  scanner:
+    - Example_Scanner_A
+    - Example_Scanner_B
+
+
+# 4. Combined DICOM, BIDS and data frame creation
+dcm_bids_df:
+  main_folder: 'D:\Research\PET_Data'
+  project_folder: 'Example_Project'
+  output_folder: 'Database\raw\Example_Project'
+
+
+# 5. Dynamic to static scan conversion
+dynamic_2_static:
+  MainFolder: 'D:\Research\Dynamic_PET'
+  SubFolder: 'Example_Project'
+  StudyConditions:
+    - Condition_A
+    - Condition_B
